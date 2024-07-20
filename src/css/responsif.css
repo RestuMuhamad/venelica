@@ -1,0 +1,128 @@
+/* Tablet */
+@media (min-width: 768px) {
+  header nav {
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  .btn-src {
+    display: none;
+  }
+
+  #main {
+    flex-direction: row;
+    gap: 0;
+    position: relative;
+  }
+
+  .content-first {
+    align-self: start;
+    margin-left: 1.2em;
+    position: sticky;
+    top: 20px;
+  }
+
+  .banner-footer {
+    top: -95px;
+  }
+
+  #footer .main {
+    flex-direction: row;
+    gap: 1.2em;
+  }
+
+  #footer .main .link {
+    flex-direction: row;
+    flex-grow: 2;
+  }
+
+  .main-content {
+    flex-direction: row;
+    gap: .5em;
+  }
+
+  .metode-pembayaran {
+    padding-top: 0;
+  }
+
+  .header-card h3 {
+    width: 30%;
+  }
+
+  .header-card .separator {
+    width: 80%;
+  }
+
+  .card.joki {
+    width: 85%;
+  }
+
+  .box-rank img {
+    width: 65%;
+  }
+
+  .agent img {
+    height: 6em;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .btn-bars {
+    display: none;
+  }
+
+  nav .box-link {
+    display: flex;
+  }
+
+  .acc {
+    font-size: 1.2em;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .card .banner {
+    height: 350px;
+  }
+
+  .content-first {
+    position: relative;
+    top: 0px;
+  }
+
+  .banner-rounded {
+    width: 120px;
+    height: 120px;
+    border-radius: 25%;
+    display: inline-block;
+  }
+
+  .floating-banner {
+    display: none;
+  }
+
+  .nominal-service {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .box-grid {
+    margin-top: 10px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 32%);
+  }
+
+  .banner-footer {
+    top: -140px;
+  }
+
+  #footer {
+    padding-bottom: 100px;
+  }
+
+  #footer .main .sosmed {
+    margin-left: 20px;
+  }
+}

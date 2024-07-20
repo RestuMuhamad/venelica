@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="shortcut icon"
+			href="src/img/banner/logo.png"
+			type="image/x-icon"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+			integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Dashboard - Toko Valorant</title>
+		<link rel="stylesheet" href="src/css/main.css" />
+		<link rel="stylesheet" href="src/css/font.css" />
+		<link rel="stylesheet" href="src/css/responsif.css" />
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	</head>
+	<body>
+		<!-- Start Modal Agent -->
+		<div id="modalAgent" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span id="closeModalBtn" class="close">&times;</span>
+					<p>PILIH / REQUEST AGENT</p>
+				</div>
+				<div class="box-agent">
+					<div class="agent">
+						<img src="src/img/agent/phonix.png" alt="Phoenix">
+						<h4>Phoenix</h4>
+						<div class="checkbox">
+							<i class="fa-solid fa-check"></i>
+						</div>
+					</div>
+					<div class="agent">
+						<img src="src/img/agent/sage.png" alt="Sage">
+						<h4>Sage</h4>
+						<div class="checkbox">
+							<i class="fa-solid fa-check"></i>
+						</div>
+					</div>
+					<div class="agent">
+						<img src="src/img/agent/sova.png" alt="Sova">
+						<h4>Sova</h4>
+						<div class="checkbox">
+							<i class="fa-solid fa-check"></i>
+						</div>
+					</div>
+					<div class="agent">
+						<img src="src/img/agent/viper.png" alt="Viper">
+						<h4>Viper</h4>
+						<div class="checkbox">
+							<i class="fa-solid fa-check"></i>
+						</div>
+					</div>
+					<div class="agent">
+						<img src="src/img/agent/skye.png" alt="Skey">
+						<h4>Skey</h4>
+						<div class="checkbox">
+							<i class="fa-solid fa-check"></i>
+						</div>
+					</div>
+					<div class="agent">
+						<img src="src/img/agent/omen.png" alt="Omen">
+						<h4>Omen</h4>
+						<div class="checkbox">
+							<i class="fa-solid fa-check"></i>
+						</div>
+					</div>
+					<div class="agent">
+						<img src="src/img/agent/reyna.png" alt="Reyna">
+						<h4>Reyna</h4>
+						<div class="checkbox">
+							<i class="fa-solid fa-check"></i>
+						</div>
+					</div>
+				</div>
+				<button class="btn-pilih-agent">PILIH AGENT</button>
+			</div>
+    </div>
+		<!-- End Modal -->
+
+		<!-- Start Modal CheckOut -->
+		<div id="modalCheckOut" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span id="closeModalBtn" class="close">&times;</span>
+					<p>RINCIAN ORDER</p>
+				</div>
+				<div class="box-order">
+					<div class="order-rank">
+						<img src="src/img/rank/iron1.png" alt="Rank" id="modal-img-rank-awal">
+						<h4>To</h4>
+						<img src="src/img/rank/iron1.png" alt="Rank" id="modal-img-rank-tujuan">
+					</div>
+					<div class="form-order">
+						<article class="content-card">
+							<h6>Username</h6>
+							<input type="text"/>
+						</article>
+						<article class="content-card">
+							<h6>Password</h6>
+							<input type="text"/>
+							<h6 class="capt">
+								Password akan terenkripsi end to end
+							</h6>
+						</article>
+						<article class="content-card">
+							<h6>Whatsapp</h6>
+							<input type="text"/>
+						</article>
+					</div>
+				</div>
+				<button class="btn-buat-order">BUAT ORDERAN</button>
+			</div>
+    </div>
+		<!-- End Modal -->
+
+		<!-- Start Header -->
+		<header id="header">
+			<nav>
+				<div class="box-logo">
+					<img
+						src="src/img/banner/logo.png"
+						alt="Logo-mini"
+						class="logo-mini"
+					/>
+				</div>
+				<div class="box-btn-nav">
+					<div class="box-link">
+						<a href="#">Home</a>
+						<a href="#">Joki Valorant<a>
+						<a href="#">Cek Pesanan</a>
+					</div>
+					<button class="btn-nav btn-bars"><i class="fa-solid fa-bars"></i></button>
+				</div>
+			</nav>
+			<section class="link-nav">
+				<a href="#">Home</a>
+				<a href="#">Joki Valorant</a>
+				<a href="#">Cek Pesanan</a>
+			</section>
+		</header>
+		<!-- End Header -->
+
+		<!-- Start main -->
+		<section id="main" class="joki">
+      <section class="card-content">
+        <section class="card joki">
+          <div class="header-card joki">
+            <h3>BUAT ORDERAN</h3>
+            <div class="separator"></div>
+          </div>
+
+          <div class="main-content">
+            <div class="content-rank">
+							<div class="box-rank">
+								<h4>Pilih Rank Awal</h4>
+								<div class="custom-select-wrapper">
+									<select class="custom-select" id="rank-awal">
+										<option value="0">Pilih Rank</option>
+										<option value="iron">Iron</option>
+										<option value="bronze">Bronze</option>
+										<option value="silver">Silver</option>
+										<option value="gold">Gold</option>
+										<option value="diamond">Diamond</option>
+										<option value="ascendant">Ascendant</option>
+									</select>
+								</div>
+								<img src="src/img/rank/iron3.png" alt="iron" id="rank-awal">
+							</div>
+
+							<div class="box-rank">
+								<h4>Pilih Rank Tujuan</h4>
+								<select class="custom-select" id="rank-tujuan">
+									<option value="0">Pilih Rank</option>
+									<option value="iron">Iron</option>
+									<option value="bronze">Bronze</option>
+									<option value="silver">Silver</option>
+									<option value="gold">Gold</option>
+									<option value="diamond">Diamond</option>
+									<option value="ascendant">Ascendant</option>
+								</select>
+
+								<h4>Pilih Server</h4>
+								<select class="custom-select">
+									<option value="0">Asia</option>
+								</select>
+								<img src="src/img/rank/iron3.png" alt="iron" id="rank-tujuan">
+							</div>
+						</div>
+
+						<div class="metode-pembayaran">
+							<h4>Pilih Metode Pembayaran</h4>
+							<div class="custom-select-wrapper">
+								<select class="custom-select">
+									<option value="0">Pilih Pembayaran</option>
+									<option value="qriss">(E-Money) Qriss</option>
+									<option value="qriss">(E-Money) Dana</option>
+									<option value="qriss">(E-Money) OVO</option>
+									<option value="qriss">(E-Money) Gopay</option>
+									<option value="qriss">(Retail) ALFAMART, PEGADAIAN, POS, DAN DAN</option>
+								</select>
+							</div>
+
+							<div class="additional">
+								<div class="line-text">
+									<div class="line-short"></div>
+									<h4 class="text">ADD ON</h4>
+									<div class="line-long"></div>
+								</div>
+								<div class="box-addition">
+									<h5>TV PROSES</h5>
+									<div class="custom-select-wrapper">
+										<select class="custom-select">
+											<option value="0">Normal</option>
+											<option value="1">Cepat (1-2 Hari)</option>
+											<option value="2">Kilat (1 Hari)</option>
+										</select>
+									</div>
+								</div>
+								<div class="box-addition">
+									<h5>TV AGENT</h5>
+									<button id="openAgent">PILIH</button>
+								</div>
+								<div class="form-btn">
+									<input type="text" placeholder="Kode Voucher">
+									<button>CEK</button>
+								</div>
+							</div>
+
+							<div class="additional">
+								<div class="line-text">
+									<div class="line-short"></div>
+									<h4 class="text">TOTAL</h4>
+									<div class="line-long"></div>
+								</div>
+								<div class="box-addition">
+									<h5>Subtotal</h5>
+									<h5>Rp 500.000</h4>
+								</div>
+								<div class="box-addition">
+									<h5>TV Proses</h5>
+									<h5>Rp 50.000</h4>
+								</div>
+								<div class="box-addition">
+									<h5>TV AGENT</h5>
+									<h5>Rp0.000</h4>
+								</div>
+								<div class="box-addition">
+									<h5>Diskon</h5>
+									<h5>Rp 0</h4>
+								</div>
+								<div class="box-addition">
+									<h5>Total</h5>
+									<h5 class="total">Rp 560.000</h4>
+								</div>
+							</div>
+
+							<button id="btn-checkout-joki" class="btn-checkout joki">CHECKOUT</button>
+						</div>
+          </div>
+
+        </section>
+      </section>
+		</section>
+		<!-- End main -->
+
+		<!-- Strat footer -->
+		<footer id="footer" class="joki">
+			<p>Copyright © 2022 - All Right Reserved</p>
+		</footer>
+		<!-- End footer -->
+	</body>
+
+	<script src="src/js/main.js"></script>
+</html>
