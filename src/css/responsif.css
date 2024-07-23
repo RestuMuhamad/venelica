@@ -31,9 +31,14 @@
     gap: 1.2em;
   }
 
+  #footer .main .sosmed {
+    flex-grow: 3;
+  }
+
   #footer .main .link {
+    width: max-content;
     flex-direction: row;
-    flex-grow: 2;
+    flex-grow: 1;
   }
 
   .main-content {
@@ -68,6 +73,16 @@
 
 /* Desktop */
 @media (min-width: 1025px) {
+  #header {
+    padding: 20px 80px;
+    padding-bottom: 50px;
+  }
+
+  #header nav {
+    font-size: 1.5em;
+    padding: 0;
+  }
+
   .btn-bars {
     display: none;
   }
